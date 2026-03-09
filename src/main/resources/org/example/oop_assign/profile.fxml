@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane style="-fx-background-color: d9d9d9;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.oop_assign.StudentController">
+
+<top>
+    <MenuBar fx:id="menuBar" style="-fx-background-color: a85a00; -fx-padding: 6;" styleClass="main-menu-bar">
+        <menus>
+            <Menu text="File">
+                <items>
+                    <MenuItem fx:id="newMenuItem" text="New" />
+                    <MenuItem fx:id="exitMenuItem" text="Exit" />
+                </items>
+            </Menu>
+            <Menu text="Edit">
+                <items>
+                    <MenuItem text="Cut" />
+                    <MenuItem text="Copy" />
+                    <MenuItem text="Paste" />
+                </items>
+            </Menu>
+            <Menu text="Theme">
+                <items>
+                    <MenuItem text="Light" />
+                    <MenuItem text="Dark" />
+                </items>
+            </Menu>
+            <Menu text="Help">
+                <items>
+                    <MenuItem fx:id="aboutMenuItem" text="About" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</top>
+
+<left>
+    <VBox fx:id="leftPanel" prefWidth="160" style="-fx-background-color: bf8230;" styleClass="left-panel">
+        <children>
+            <StackPane style="-fx-background-color: white; -fx-padding: 15;" styleClass="image-wrapper">
+                <children>
+                    <ImageView fx:id="profileImageView" fitHeight="110" fitWidth="110" preserveRatio="true" />
+                </children>
+                <padding>
+                    <Insets bottom="15" left="15" right="15" top="15" />
+                </padding>
+            </StackPane>
+        </children>
+    </VBox>
+</left>
+
+<center>
+    <VBox styleClass="center-panel">
+        <children>
+            <TableView fx:id="studentTable" style="-fx-background-color: white;" styleClass="student-table">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="80" text="ID" />
+                    <TableColumn fx:id="firstNameColumn" prefWidth="150" text="First Name" />
+                    <TableColumn fx:id="lastNameColumn" prefWidth="150" text="Last Name" />
+                    <TableColumn fx:id="departmentColumn" prefWidth="150" text="Department" />
+                    <TableColumn fx:id="majorColumn" prefWidth="130" text="Major" />
+                    <TableColumn fx:id="emailColumn" prefWidth="180" text="Email" />
+                </columns>
+            </TableView>
+        </children>
+    </VBox>
+</center>
+
+<right>
+    <VBox fx:id="rightPanel" prefWidth="270" spacing="12" style="-fx-background-color: green; -fx-padding: 10;" styleClass="right-panel">
+        <children>
+            <TextField fx:id="idField" promptText="ID" style="-fx-background-color: white; -fx-background-radius: 4; -fx-pref-height: 38; -fx-border-color: dddddd; -fx-border-radius: 4;" styleClass="form-field" />
+            <TextField fx:id="firstNameField" promptText="First Name" style="-fx-pref-height: 38; -fx-background-color: white; -fx-background-radius: 4; -fx-border-color: dddddd; -fx-border-radius: 4;" styleClass="form-field" />
+            <TextField fx:id="lastNameField" promptText="Last Name" style="-fx-pref-height: 38; -fx-background-color: white; -fx-background-radius: 4; -fx-border-color: dddddd; -fx-border-radius: 4;" styleClass="form-field" />
+            <TextField fx:id="departmentField" promptText="Department" style="-fx-background-color: white; -fx-background-radius: 4; -fx-border-color: dddddd; -fx-border-radius: 4; -fx-pref-height: 38;" styleClass="form-field" />
+            <TextField fx:id="majorField" promptText="Major" style="-fx-background-color: white; -fx-background-radius: 4; -fx-border-color: dddddd; -fx-background-radius: 4; -fx-pref-height: 38;" styleClass="form-field" />
+            <TextField fx:id="emailField" promptText="Email" style="-fx-background-color: white; -fx-background-radius: 4; -fx-border-color: dddddd; -fx-border-radius: 4; -fx-pref-height: 38;" styleClass="form-field" />
+            <TextField fx:id="imageUrlField" promptText="imageURL" style="-fx-background-color: white; -fx-background-radius: 4; -fx-border-color: dddddd; -fx-border-radius: 4; -fx-pref-height: 38;" styleClass="form-field" />
+
+            <Region VBox.vgrow="ALWAYS" />
+
+            <Button fx:id="clearButton" maxWidth="1.7976931348623157E308" style="-fx-background-color: bf8230;" styleClass="action-button" text="Clear" />
+            <Button fx:id="addButton" maxWidth="1.7976931348623157E308" style="-fx-background-color: bf8230;" styleClass="action-button" text="Add" />
+            <Button fx:id="deleteButton" maxWidth="1.7976931348623157E308" style="-fx-background-color: bf8230;" styleClass="action-button" text="Delete" />
+            <Button fx:id="editButton" maxWidth="1.7976931348623157E308" style="-fx-background-color: bf8230;" styleClass="action-button" text="Edit" />
+        </children>
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+    </VBox>
+</right>
+
+<bottom>
+    <HBox prefHeight="45" style="-fx-background-color: a6a6a6;" styleClass="bottom-bar" />
+</bottom>
+
+</BorderPane>
